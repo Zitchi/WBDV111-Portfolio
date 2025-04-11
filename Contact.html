@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      perspective: 10px;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 20px;
+    }
+
+    li {
+      border: thin solid #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: black;
+      background-color: white;
+      border-radius: 10px;
+      border: 14px solid white;
+      transform: scale(1);
+      border-width: thick;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      transform-style: preserve-3d;
+      z-index: -1;
+    }
+
+    .background {
+      transform: translateZ(-10px) scale(2);
+    }
+
+    .foreground {
+      transform: translateZ(-5px) scale(1.5);
+    }
+
+    .background,
+    .foreground {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .title {
+      font-size: 7rem;
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    section {
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+    footer {
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .contact-info p {
+      font-size: 1.5rem;
+      margin: 0.5rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #444;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+    }
+
+    .contact-form button {
+      font-size: 1.5rem;
+      padding: 10px;
+      background-color: #ff8c00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e67e22;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <img src="Image/background.jpg" class="background" alt="background">
+    <img src="Image/Foreground.png" class="foreground" alt="foreground">
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Portfolio.html">About Me</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <header>
+      <h1 class="title">Contact</h1>
+    </header>
+
+    <section>
+      <p>If you have any questions or would like to collaborate, feel free to reach out to me through the contact form below or via the details provided. I'd love to hear from you!</p>
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> <a href="mailto:jmsison7599qc@student.fatima.edu.ph">jmsison7599qc@student.fatima.edu.ph</a></p>
+      <p><strong>Phone:</strong> +63 994 7452 870</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/lester.me.me.me/?_rdr">John Lester Moral Sison</a></p>
+      <p><strong>Address:</strong> Novaliches, Quezon City</p>
+    </section>
+
+    <section>
+      <div class="contact-form">
+        <h2>Send me a message</h2>
+        <form action="your-server-side-script.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+<footer>
+  <h6 class="footerr">&copy John Lester M. Sison's Portfolio. All Rights Reserved</h6>
+</footer>
+</html>

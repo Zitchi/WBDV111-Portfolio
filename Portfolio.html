@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      perspective: 10px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 20px;
+    }
+
+    li {
+      border: thin solid #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: black;
+      background-color: white;
+      border-radius: 10px;
+      border: 14px solid white;
+      transform: scale(1);
+      border-width: thick;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      transform-style: preserve-3d;
+      z-index: -1;
+    }
+  footer {
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+    .background {
+      transform: translateZ(-10px) scale(2);
+    }
+
+    .foreground {
+      transform: translateZ(-5px) scale(1.5);
+    }
+
+    .background,
+    .foreground {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .title {
+      font-size: 7rem;
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    section {
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 0;
+    }
+
+    .about-section img {
+      border-radius: 50%;
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .about-section ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      font-size: 1.5rem;
+    }
+
+    .about-section ul li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-section ul li i {
+      font-size: 3rem;
+      color: #ff8c00;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-section ul li span {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 2rem 0;
+      }
+      .about-section h2 {
+        font-size: 2rem;
+      }
+      .about-section p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <img src="Image/background.jpg" class="background" alt="background">
+    <img src="Image/Foreground.png" class="foreground" alt="foreground">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Portfolio.html">About Me</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1 class="title">About Me</h1>
+    </header>
+
+    <section>
+      <div class="about-section">
+        <img src="Image/Face.png" alt="John Lester M. Sison">
+        <h2>John Lester M. Sison</h2>
+        <p>
+          Hello, I’m John Lester M. Sison, an enthusiastic IT student with a deep passion for technology and problem-solving. Currently, I’m pursuing my Bachelor’s degree in Information Technology at Our Lady of Fatima University.
+        </p>
+        <p>
+          I am constantly driven to learn new skills, overcome challenges, and apply my knowledge to solve real-world problems. Whether it’s developing web applications, designing solutions, or working on complex problems, I thrive in environments where creativity and technical expertise intersect.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article>
+        <h3>Project Management</h3>
+        <p>Our Lady of Fatima University | 2029</p>
+        <ul>
+          <li>Defining project scope</li>
+          <li>Managing project administration</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Student Library Assistant</h3>
+        <p>OLFU Learning Resource Center | 2029</p>
+        <ul>
+          <li>Encoding daily log-in</li>
+          <li>Encoding book inventory</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Communication</li>
+        <li>Adaptability</li>
+        <li>Leadership</li>
+        <li>Skill Management</li>
+      </ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <article>
+        <h3>Business Analytics, Business Continuity and Strategies</h3>
+        <p>CAPM | April 24, 2028</p>
+      </article>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <h3>Bachelor of Science in Information Technology</h3>
+      <p>Our Lady of Fatima University | 2028</p>
+      <h3>Information and Communication Technology</h3>
+      <p>Jordan Woods Academy | 2024</p>
+    </section>
+  </div>
+</body>
+<footer>
+  <h6 class="footerr">&copy John Lester M. Sison's Portfolio. All Rights Reserved</h6>
+</footer>
+</html>

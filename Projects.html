@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      perspective: 10px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 20px;
+    }
+
+    li {
+      border: thin solid #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: black;
+      background-color: white;
+      border-radius: 10px;
+      border: 14px solid white;
+      transform: scale(1);
+      border-width: thick;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      transform-style: preserve-3d;
+      z-index: -1;
+    }
+    footer {
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+
+    .background {
+      transform: translateZ(-10px) scale(2);
+    }
+
+    .foreground {
+      transform: translateZ(-5px) scale(1.5);
+    }
+
+    .background,
+    .foreground {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .title {
+      font-size: 7rem;
+      color: white;
+      text-shadow: 0 0 5px black;
+    }
+
+    section {
+      text-align: center;
+      font-size: 2rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: justify;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      background-color: #444;
+      border-radius: 15px;
+      margin: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      color: white;
+      width: 30%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      font-size: 1.2rem;
+    }
+
+    .project-links a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #ff8c00;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-links a:hover {
+      background-color: #e67e22;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <img src="Image/background.jpg" class="background" alt="background">
+    <img src="Image/Foreground.png" class="foreground" alt="foreground">
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Portfolio.html">About Me</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <header>
+      <h1 class="title">Projects</h1>
+    </header>
+
+    <section>
+      <p>Here are some of the projects I’ve worked on. Each project represents my skills and experience in development. Click the project titles to see the live demo or view the source code on GitHub.</p>
+    </section>
+
+    <section class="project-section">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="Image/gradingsystem.jpg" alt="Grading System Oroject Photo">
+        <h3>Grading System</h3>
+        <p>A project that I made together with my groupmates when I'm a Grade 11 Student.</p>
+        <div class="project-links">
+          <a href="https://github.com/username/placeholder" target="walangmalagay">View on GitHub</a>
+          <a href="https://www.kunyarimayproject.com" target="walangmalagay">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="Image/chess.png" alt="Chess Project Photo">
+        <h3>Simple Chess Project</h3>
+        <p>A project made by me and my friend during second semester when we're Grade 12.</p>
+        <div class="project-links">
+          <a href="https://github.com/username/placeholder" target="walangmalagay">View on GitHub</a>
+          <a href="https://www.kunyarimayproject.com" target="walangmalagay">Live Demo</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<footer>
+  <h6 class="footerr">&copy John Lester M. Sison's Portfolio. All Rights Reserved</h6>
+</footer>
+</html>
